@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.dat256.grupp1.simplepark.Map
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contextClickable="true" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/menuButton"
+        android:layout_margin = "10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:clickable="true"
+        android:src="@android:drawable/btn_star"
+        app:backgroundTint="@android:color/background_light"
+        app:fabCustomSize="60dp"
+        app:fab_addButtonColorNormal="@color/colorPrimary"
+        app:fab_expandDirection="down"
+        app:fab_labelStyle="@style/fabWithLabel"
+        app:fab_labelsPosition="right">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/findOptimalParkingSpot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foregroundGravity="center"
+            android:visibility="gone"
+            app:backgroundTint="@android:color/background_light"
+            app:fab_icon="@drawable/ic_optimal_vector"
+            app:fab_size="mini"
+            app:fab_title="Cheapest" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/findNearButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:visibility="gone"
+            app:backgroundTint="@android:color/background_light"
+            app:fab_icon="@drawable/ic_nearest_vector"
+            app:fab_size="mini"
+            app:fab_title="Closest" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/resetButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="18dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        app:backgroundTint="@android:color/background_light"
+        app:fab_icon="@drawable/ic_reset_vector"
+        app:fab_size="mini" />
+
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/followButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:gravity="center"
+        app:backgroundTint="@android:color/background_light"
+        app:fab_icon="@drawable/ic_my_location_vector"
+        />
+
+    <LinearLayout
+        android:id="@+id/optimalContainer"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:alpha="0.9"
+        android:backgroundTint="@android:color/background_light"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:weightSum="3">
+
+
+        <Button
+            android:id="@+id/decreaseRadius"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:text="-"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/pickParkingspot"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:drawableBottom="@drawable/tickbox"
+            android:text="500m"
+            android:textAllCaps="false"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/increaseRadius"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:text="+"
+            android:textSize="40dp" />
+    </LinearLayout>
+
+</FrameLayout>
+
